@@ -47,6 +47,10 @@ public class LogoController {
         return new ResponseEntity<>(content, headers, HttpStatus.OK);
     }
 
+    /**
+     * Execute code block as system user "anonymous".
+     * All data CRUD permissions are limited by user roles assigned to "anonymous".
+     */
     private <T> T withAnonymousUserSession(Callable<T> callable) throws Exception {
         UserSession userSession = anonymousSessionHolder.getAnonymousSession();
         AppContext.setSecurityContext(new SecurityContext(userSession));
