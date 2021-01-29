@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-logos" insertBefore="administration" caption="mainMsg://menu_config.application-logos">
+        <item screen="logos_LogoImage.browse" caption="mainMsg://menu_config.logos_LogoImage.browse"/>
+    </menu>
+</menu-config>
